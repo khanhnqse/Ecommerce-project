@@ -73,7 +73,7 @@ public class TestCase01 {
 
         File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-        String png = ("D:\\STUDY\\Semester 5\\SWT301\\selenium-webdriver-java-master\\selenium-webdriver-java-master\\src\\test\\resources\\testcase" + scc + ".png");
+        String png = ("D:\\STUDY\\Semester 5\\SWT301\\Ecommerce-project-TC01-TC02-\\selenium-webdriver-java-master\\selenium-webdriver-java-master\\src\\test\\resources\\testcase" + scc + ".png");
 
         FileUtils.copyFile(scrFile, new File(png));
     } catch (Exception e){
