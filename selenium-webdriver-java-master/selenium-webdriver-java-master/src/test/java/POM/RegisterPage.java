@@ -16,6 +16,7 @@ public class RegisterPage {
     By confirmPasswordInputLocator = By.id("confirmation");
     By registerButton = By.xpath("//span[contains(text(),'Register')]");
 
+
     //Constructor with required parameter as a WedDriver
 
     public RegisterPage(WebDriver driver) {
@@ -63,5 +64,6 @@ public class RegisterPage {
     public void clickRegisterButton(){
         driver.findElement(registerButton).click();
     }
+
 
 }
