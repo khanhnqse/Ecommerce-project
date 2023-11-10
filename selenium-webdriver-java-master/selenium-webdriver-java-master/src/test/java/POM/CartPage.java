@@ -11,7 +11,10 @@ public class CartPage {
 
     By regionInputLocator = By.id("region");
     By postcodeInputLocator = By.id("postcode");
+    By reOderButton = By.xpath("//tr[@class='last even']//a[@class='link-reorder'][normalize-space()='Reorder']");
+    By qtyText = By.cssSelector("input[title='Qty']");
 
+    By updateqtyButton = By.cssSelector("button[title='Update']");
 
 
     //Constructor with required parameter as a WedDriver
@@ -21,8 +24,13 @@ public class CartPage {
     }
 //method
 
-
-
+    public void clickUpdateQty(){driver.findElement(updateqtyButton).click();};
+    public void clickReOrder(){driver.findElement(reOderButton).click();}
+    public void enterQty(String qty) {
+        WebElement qtyElement = driver.findElement(qtyText);
+        qtyElement.clear();
+        qtyElement.sendKeys(qty);
+    }
 
 
     public void enterRegionInput(String region){
